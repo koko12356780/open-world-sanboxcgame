@@ -1,0 +1,1 @@
+Updates are hosted at https://github.com/koko12356780/open-world-sanboxcgame/releases . Players use Update Game in launcher v1.6. Developers publish by changing project.godot config/version and pushing to main; the GitHub Actions workflow builds and uploads the release automatically. Launcher source and releases: https://github.com/koko12356780/luncvher-repop .

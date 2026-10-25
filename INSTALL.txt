@@ -1,0 +1,11 @@
+OPEN STREETS 0.11 - STREET EXPLORER
+
+Open your Open Streets launcher v1.6 and press UPDATE GAME. The launcher downloads and installs newer releases directly from GitHub. Press PLAY, then Continue to keep your saved progress.
+
+No ZIP selection or upload is required for players. The engine editor is not needed. Your Game folder must stay beside the launcher. The launcher has its own UPDATE LAUNCHER button and separate release repository.
+
+Controls: WASD drive; Space handbrake; N day/night; V cockpit; G garage; E leave/enter a stopped car. On foot: WASD walk, Shift run, Space jump, M mouse lock, R return to car. Roadster F flight, Space climb, Ctrl descend. Fly through the blue ring on the northwest tower to Ice City.
+
+Cafe, market and motor workshop shopfronts are visible scenery. Shops cannot yet be entered. Walking does not earn driving coins; saves resume in the parked car.
+
+A manual Import Local ZIP option remains available as an offline fallback.

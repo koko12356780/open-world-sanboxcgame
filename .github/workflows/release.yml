@@ -1,0 +1,30 @@
+name: Build and publish game update
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: game-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check release version
+        id: release
+        run: python ci/build_release.py check
+      - name: Build and test game
+        if: steps.release.outputs.exists != 'true'
+        run: python ci/build_release.py build
+      - name: Publish newest game
+        if: steps.release.outputs.exists != 'true'
+        run: gh release create "${{ steps.release.outputs.tag }}" build/OpenStreets-update.zip build/latest.json --repo "$env:GITHUB_REPOSITORY" --title "Open Streets ${{ steps.release.outputs.tag }}" --notes "Automatic tested game release. Use Update Game in your launcher." --latest
