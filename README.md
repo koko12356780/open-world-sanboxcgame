@@ -1,18 +1,25 @@
-# Open Streets
+# Open Streets — City Routes
 
-A Windows driving and walking sandbox built with Godot 4.6.1.
+A Windows driving and walking sandbox. The latest playable version uses Unreal Engine.
 
-## Players
-Open the companion launcher and press **Update Game**. It checks this repository's latest release, downloads a new version and installs it without a file picker. Saved cars, coins and upgrades stay in your local save folder.
+## Play or update
 
-Get the launcher from https://github.com/koko12356780/luncvher-repop/releases/latest . Game source ZIPs are for editing, not playing.
+Existing players: click **Update Launcher** first (version 1.7.1), then **Update Game**, then **Play**. The launcher downloads and installs the newest game directly from GitHub. Saved progress stays separate.
 
-## Game
-Drivable cars, cockpit and chase cameras, workshop upgrades, currency, premium flight, rear thrusters, Ice City through the blue tower portal, visible shopfronts and walking mode. Stop and press E to leave/enter your car; WASD walk, Shift run, Space jump, R recover. Shopfronts are scenery, not enterable stores.
+New players: download **OpenStreets-Full-Game.zip** from [the latest game release](https://github.com/koko12356780/open-world-sanboxcgame/releases/latest), extract the entire ZIP to a short folder such as `C:\Games\OpenStreets`, and open `OpenStreetsLauncher.exe`. Keep the Game folder beside it. No Godot or Unreal editor is needed.
 
-## Development and automatic publishing
-Import project.godot into standard Godot 4.6.1 (no .NET) and press F5.
+Launcher releases: https://github.com/koko12356780/luncvher-repop/releases/latest .
 
-To publish an update, increase config/version in project.godot and push changes to main. GitHub Actions imports the project, runs the headless game tests, exports the Windows PCK and creates a release containing latest.json and OpenStreets-update.zip. No manual game ZIP upload is needed. Already-published versions are never overwritten.
+## City Routes 1.1.0
 
-The workflow uses GitHub's built-in temporary token and pinned official Godot downloads. No developer password or saved game is committed. Original source/art/audio uses MIT; engine notices are in licenses/.
+A six-kilometre coast, connected city streets, 214 new buildings, 512 trees, a forest loop, park, bridge, sixteen moving traffic cars and eight purchasable vehicles. The sports cockpit has a curved dashboard, red wheel, carbon-style console, quilted seats, live instruments, navigation and a rear-view mirror. Driver hands are optional in Options.
+
+The saved time slider supports sunrise, daytime, sunset, night and optional time flow. Garage upgrades, coins, Roadster flight, Aurora thrusters, walking, burnouts and the Ice City portal remain available. Visuals are stylized and crashes use arcade impact damage. Shops are scenery.
+
+WASD drive; V/C camera; G garage; T clock; N time presets; E leave/enter a parked car; R repair/reset; Esc pause.
+
+## Source and development
+
+This repository preserves the legacy Godot source. The automatic Source code ZIP/TAR links are not the playable Unreal game or its editable project. The native Unreal project remains local; download the named Windows assets to play.
+
+The existing Godot workflow builds only the legacy edition. Native Unreal releases are built and tested with the local engine before upload. Runtime and engine/template notices are included with the game.
